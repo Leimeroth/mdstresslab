@@ -2,3 +2,6 @@
 /.idea/
 /cmake-build-debug/
 /docs/
+.vscode
+util/deformPlate.f90
+util/deformPlate
