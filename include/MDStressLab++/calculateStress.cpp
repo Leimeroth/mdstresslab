@@ -414,8 +414,6 @@ int process_DEDr(const void* dataObject, const double de, const double r, const 
 	int index;
 	int numberOfNeighborsOfi = bonds_ptr->nlOne_ptr->Nneighbors[i];
 	int numberOfNeighborsOfj = bonds_ptr->nlOne_ptr->Nneighbors[j];
-	bool iFound= false;
-	bool jFound= false;
 
 	// Look for j in the neighbor list of i
 	for(int i_neighborOfi= 0; i_neighborOfi<numberOfNeighborsOfi; i_neighborOfi++)
@@ -424,7 +422,6 @@ int process_DEDr(const void* dataObject, const double de, const double r, const 
 		if(bonds_ptr->nlOne_ptr->neighborList[index] == j)
 		{
 			bonds_ptr->fij[index]+= de;
-			jFound= true;
 			break;
 		}
 	}
@@ -435,7 +432,6 @@ int process_DEDr(const void* dataObject, const double de, const double r, const 
 		if(bonds_ptr->nlOne_ptr->neighborList[index] == i)
 		{
 			bonds_ptr->fij[index]+= de;
-			iFound= true;
 			break;
 		}
 
