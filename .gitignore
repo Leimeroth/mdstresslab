@@ -3,5 +3,5 @@
 /cmake-build-debug/
 /docs/
 .vscode
-util/deformPlate.f90
-util/deformPlate
+/util/deformPlate/deformPlate.f90
+/util/deformPlate/run
