@@ -5,3 +5,4 @@
 .vscode
 /util/deformPlate/deformPlate.f90
 /util/deformPlate/run
+.cache/**

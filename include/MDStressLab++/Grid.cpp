@@ -11,6 +11,10 @@
 #include "SpatialHash.h"
 #include <iostream>
 
+
+int GridBase::numberOfReferenceGrids= 0;
+int GridBase::numberOfCurrentGrids= 0;
+
 template<ConfigType T>
 Grid<T>::Grid(int _ngrid) : ngrid(_ngrid)
 {

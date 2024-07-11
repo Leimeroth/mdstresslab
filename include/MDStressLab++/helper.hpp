@@ -8,10 +8,10 @@
 #ifndef HELPER_HPP_
 #define HELPER_HPP_
 
+#include "typedef.h"
 #include <cmath>
 #include <iostream>
 #include <stdlib.h>
-#include <vector>
 
 
 #define SMALL 1.0e-10

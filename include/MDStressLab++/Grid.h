@@ -5,8 +5,6 @@
  *      Author: Nikhil
  */
 
-#ifndef GRID_H_
-#define GRID_H_
 #include "typedef.h"
 #include <vector>
 #include "SubConfiguration.h"
@@ -20,8 +18,6 @@ public:
 	static int numberOfCurrentGrids;
 };
 
-int GridBase::numberOfReferenceGrids= 0;
-int GridBase::numberOfCurrentGrids= 0;
 
 /*!
  * Describes a grid on which stress is computed.
@@ -43,11 +39,3 @@ public:
 	void setCounter();
 	std::vector<std::set<int>> getGridNeighborLists(const SubConfiguration&, const double&) const;
 };
-
-/*!
- * \example testGrid.cpp
- * This is an example of how to use the Grid class
- */
-#include "Grid.cpp"
-
-#endif /* GRID_H_ */

@@ -15,6 +15,7 @@
 #include "Configuration.h"
 #include "SubConfiguration.h"
 #include "Stress.h"
+#include "calculateStress.h"
 #include "typedef.h"
 #include "StressTuple.h"
 #include "helper.hpp"
