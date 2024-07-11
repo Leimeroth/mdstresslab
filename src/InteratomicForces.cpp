@@ -6,7 +6,6 @@
  */
 
 #include "InteratomicForces.h"
-#include<iostream>
 
 // Instantiate interatomic forces from neighbor list
 InteratomicForces::InteratomicForces(NeighList* _nl_ptr)

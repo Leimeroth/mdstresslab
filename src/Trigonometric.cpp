@@ -16,7 +16,7 @@ Trigonometric::~Trigonometric(){}
 double Trigonometric::operator()(const double& t)  const
 {
     // Trigonometric weighting function
-    if (t <= -1 || t >= 1)
+	if (t <= -1 || t >= 1)
 	{
 		return 0.0;
 	} 
@@ -41,8 +41,7 @@ double Trigonometric::integrate(const Vector3d& vec1_pull_seg, const Vector3d& v
 		if (fabs(a(i)) < epsilon)
 		{
 			result = result + cos(b(i));
-		}
-    	else
+		} else
 		{
 			result = result + (sin(a(i) + b(i)) - sin(b(i))) / a(i);
 		}
@@ -52,8 +51,7 @@ double Trigonometric::integrate(const Vector3d& vec1_pull_seg, const Vector3d& v
     if (fabs(a(0) - a(1)) < epsilon)
     {
         result = result + cos(b(0) - b(1)) / 2.0;
-	}
-	else
+	} else
 	{
         result = result + (sin(b(0) - b(1) + a(0) - a(1)) - sin(b(0) - b(1))) / ((a(0) - a(1)) * 2.0);
 	}
@@ -68,7 +66,7 @@ double Trigonometric::integrate(const Vector3d& vec1_pull_seg, const Vector3d& v
 	}
 
 	// 02
-    if (fabs(a(0) - a(2)) < epsilon)
+	if (fabs(a(0) - a(2)) < epsilon)
     {
         result = result + cos(b(0) - b(2)) / 2.0;
 	}
@@ -90,8 +88,7 @@ double Trigonometric::integrate(const Vector3d& vec1_pull_seg, const Vector3d& v
     if (fabs(a(1) - a(2)) < epsilon)
     {
         result = result + cos(b(1) - b(2)) / 2.0;
-	}
-	else
+	} else
 	{
         result = result + (sin(b(1) - b(2) + a(1) - a(2)) - sin(b(1) - b(2))) / ((a(1) - a(2)) * 2.0);
 	}
@@ -119,7 +116,7 @@ double Trigonometric::integrate(const Vector3d& vec1_pull_seg, const Vector3d& v
 	{
         result = result + cos(b(0) + b(1) - b(2)) / 4.0;
 	}
-    else
+	else
 	{
 		result = result + (sin(b(0) + b(1) - b(2) + a(0) + a(1) - a(2)) - sin(b(0) + b(1) - b(2))) / ((a(0) + a(1) - a(2)) * 4.0);
 	}

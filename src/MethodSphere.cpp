@@ -7,8 +7,6 @@
 
 #include <math.h>
 #include <MethodSphere.h>
-#include <iostream>
-#include <limits>
 #include "typedef.h"
 
 

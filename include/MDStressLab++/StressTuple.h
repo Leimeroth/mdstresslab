@@ -7,8 +7,12 @@
 
 #ifndef INCLUDE_STRESSTUPLE_H_
 #define INCLUDE_STRESSTUPLE_H_
-
+#include "Stress.h"
+#include "typedef.h"
+#include <cstddef>
+#include <type_traits>
 // Recursively build stress of a type sType= Piola/Cauchy
+
 template<std::size_t I=0, typename ...TStress>
 inline typename std::enable_if<I == sizeof...(TStress), void>::type
  recursiveBuildStress(const double& fij,
@@ -69,7 +73,7 @@ recursiveNullifyStress(std::tuple<Stress<BF,stressType>&...> t)
 }
 
 //////////  Get the maximum averaging domain size across all bond functions of stresses of type stressType ////////////
-double averagingDomainSize_max(const std::tuple<> t)
+inline double averagingDomainSize_max(const std::tuple<> t)
 {
 	return 0;
 }
@@ -88,7 +92,7 @@ inline typename std::enable_if<I < sizeof...(TStress)-1, double>::type
 
 ///////////////////////////      Get the maximum averaging domain sizes for each grid     //////////////////////////////
 ///////////////////////////	 Returns a mapping between grid pointers and maximum domain size   /////////////////////////
-std::map<Grid<Reference>*,double> recursiveGridMaxAveragingDomainSizeMap(const std::tuple<>& t)
+inline std::map<Grid<Reference>*,double> recursiveGridMaxAveragingDomainSizeMap(const std::tuple<>& t)
 {
 std::map<Grid<Reference>*,double> map;
 return map;
@@ -157,7 +161,7 @@ inline typename std::enable_if< I < sizeof...(BF)-1, std::vector<std::pair<TGrid
 }
 
 /////////////// Returns a vector of all grid pointers for type= Reference/Current /////////////////
-std::vector<GridBase*> getBaseGridList(const std::tuple<> t)
+inline std::vector<GridBase*> getBaseGridList(const std::tuple<> t)
 {
 	std::vector<GridBase*> pgridBaseVector;
 	return pgridBaseVector;

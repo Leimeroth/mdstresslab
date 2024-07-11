@@ -10,8 +10,6 @@
 #include "Configuration.h"
 #include "typedef.h"
 #include "neighbor_list.h"
-#include "helper.hpp"
-
 
 BoxConfiguration::BoxConfiguration(int numberOfParticles, int referenceAndFinal):
 		Configuration(numberOfParticles,referenceAndFinal)

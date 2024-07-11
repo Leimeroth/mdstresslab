@@ -17,7 +17,7 @@ double Constant::operator()(const double& t) const
     // Constant weighting function
     if (t < -1.0 - epsilon || t > 1.0 + epsilon)
 	{
-        return 0.0;
+    	return 0.0;
 	} 
 	else if ((t >= -1.0 - epsilon && t <= -1.0 + epsilon) || (t <= 1.0 + epsilon && t >= 1.0 - epsilon))
     {

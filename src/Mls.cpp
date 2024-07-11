@@ -8,12 +8,10 @@
 #include <fstream>
 #include <vector>
 #include <math.h>
-#include "Grid.h"
 #include "BoxConfiguration.h"
 #include "Configuration.h"
 #include "SubConfiguration.h"
 #include "Mls.h"
-#include "neighbor_list.h"
 #include "typedef.h"
 
 //Mls::Mls(const BoxConfiguration& body, const std::vector<Vector3d>& gridCoordinates, \
